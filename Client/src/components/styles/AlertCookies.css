@@ -1,0 +1,26 @@
+.AlertCookies {
+    position: fixed;
+    bottom: 2rem;
+    z-index: 20;
+    width: 60%;
+    left: 18%;
+    background: #efb628DB;
+    color: #6d4f03;
+    padding: 2%;
+}
+
+.AlertCookies button {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #fff;
+    border: 0;
+    color: #444;
+}
+
+@media only screen and (max-width: 768px) {
+    .AlertCookies {
+        left: 1%;
+        padding: 2%;
+        width: 94%;
+    }
+}

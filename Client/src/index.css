@@ -1,0 +1,17 @@
+html, body, #root {
+  height: 100%;
+}
+
+#App {
+  min-height: 450px;
+}
+
+body {
+  background-color: #74acdf;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.formInputError {
+  border: 1px solid #f32e31!important;
+}

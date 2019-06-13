@@ -1,0 +1,39 @@
+.Home {
+    background: #FFFFFFDB;
+    max-width: 630px;
+    margin: auto;
+    padding: 10px;
+}
+
+.Home h1 {
+    padding: 2rem;
+    color: #51789c;
+}
+
+.Home h4 {
+    font-size: 16px;
+    color: #666;
+}
+
+.Btn {
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.BtnHome {
+    background: #f6b40e;
+    text-decoration: none;
+}
+
+.Btn:hover {
+    color: #da9d04!important;
+    text-decoration: none;
+}
+
+.HomeBody {
+    margin: 2rem;
+    text-align: center;
+}

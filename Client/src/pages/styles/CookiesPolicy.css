@@ -1,0 +1,19 @@
+.CookiesPolicy {
+    background: #ffffffc7;
+    padding: 20px;
+    max-width: 960px;
+    margin: auto;
+}
+
+.CookiesPolicy h2, .CookiesPolicy h3 {
+    text-transform: uppercase;
+}
+
+.CookiesPolicy p {
+    margin-bottom: 0.5rem;
+    text-align: justify;
+}
+
+.CookiesPolicy ul li {
+    text-align: left;
+}
