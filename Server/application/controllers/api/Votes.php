@@ -10,17 +10,22 @@ require APPPATH . 'libraries/Format.php';
 
 class Votes extends REST_Controller
 {
+    protected $min;
+    protected $max;
+
     public function __construct()
     {
         parent::__construct();
         $this->load->model('entities_model');
+        $this->min = 0;
+        $this->max = 7;
     }
 
     public function president_post()
     {
         $vote = $this->post('vote');
 
-        if ($vote >= 1 && $vote <= 5) {
+        if ($vote >= $this->min && $vote <= $this->max) {
             $president = new President();
             $president->setVote($vote);
             $president->setIp($this->input->ip_address());
@@ -43,7 +48,7 @@ class Votes extends REST_Controller
     {
         $vote = $this->post('vote');
 
-        if ($vote >= 1 && $vote <= 5) {
+        if ($vote >= $this->min && $vote <= $this->max) {
             $vicepresident = new VicePresident();
             $vicepresident->setVote($vote);
             $vicepresident->setIp($this->input->ip_address());
@@ -84,7 +89,7 @@ class Votes extends REST_Controller
             $this->response(array('status' => "ERROR", 'data' => 'already_voted'), REST_Controller::HTTP_FOUND);
         }
 
-        if ($voteOld == null && $president >= 1 && $president <= 5 && $vicepresident >= 1 && $vicepresident <= 5) {
+        if ($voteOld == null && $president >= $this->min && $president <= $this->max && $vicepresident >= $this->min && $vicepresident <= $this->max) {
             $vote = new Vote();
             $vote->setPresident($president);
             $vote->setVicepresident($vicepresident);

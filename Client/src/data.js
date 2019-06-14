@@ -33,7 +33,7 @@ const data = [
         vicepresident: "Juan Manuel Urtubey",
         imagepresident: require('./assets/image/candidats/RL.webp'),
         imagevicepresident: require('./assets/image/candidats/JMU.webp'),
-        image: require('./assets/image/ConsensoFederal2030.webp')
+        image: require('./assets/image/white.webp')
     },
     {
         id: "5",
@@ -43,6 +43,24 @@ const data = [
         imagepresident: require('./assets/image/candidats/NDC.webp'),
         imagevicepresident: require('./assets/image/candidats/RDP.webp'),
         image: require('./assets/image/FrenteDeIzquierda.webp')
+    },
+    {
+        id: "6",
+        name: "Frente Nos",
+        president: "Juan José Gómez Centurión",
+        vicepresident: "",
+        imagepresident: require('./assets/image/candidats/JJGC.webp'),
+        imagevicepresident: null,
+        image: require('./assets/image/white.webp')
+    },
+    {
+        id: "7",
+        name: "Frente Patriota",
+        president: "Alejandro Biondini",
+        vicepresident: "Enrique Venturino",
+        imagepresident: require('./assets/image/candidats/AB.webp'),
+        imagevicepresident: require('./assets/image/candidats/EV.webp'),
+        image: require('./assets/image/FrentePatriota.webp')
     }
 ]
 

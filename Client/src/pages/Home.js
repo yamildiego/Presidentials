@@ -11,12 +11,15 @@ class Home extends Component {
                 <div className="Home">
                     <h1>Encuesta sin fines de lucro</h1>
                     <h4>
-                        Esta encuesta no percibe NINGUNA subvención, contribución o ayuda de ningún tipo de medios de comunicación, empresas, partido político u otras organizaciones
-                </h4>
+                        Esta encuesta no percibe NINGUNA subvención, contribución o ayuda de ningún tipo.
+                    </h4>
+                    <h4>
+                        Por lo tanto, es ajena a los intereses de medios de comunicación, empresas, partido político u otras organizaciones
+                    </h4>
                     <div className="HomeBody">
                         <Link to="encuesta" className="Btn BtnHome">
                             Ir a la encuesta
-                   </Link>
+                       </Link>
                     </div>
                 </div>
             </AppLayout>

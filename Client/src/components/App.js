@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import Home from './../pages/Home';
 import Poll from './../pages/Poll';
 import CookiesPolicy from './../pages/CookiesPolicy';
+import TermsAndConditions from './../pages/TermsAndConditions';
 import Contact from './../pages/Contact';
 import './styles/App.css';
 import './../assets/fonts/fonts.css';
@@ -34,7 +35,7 @@ class App extends React.Component {
       <div className="App">
         <Route exact path="/" component={Home} />
         <Route path="/encuesta" component={Poll} />
-        <Route path="/terminos-y-condiciones" component={Contact} />
+        <Route path="/terminos-y-condiciones" component={TermsAndConditions} />
         <Route path="/politica-de-cookies" component={CookiesPolicy} />
         <Route path="/contacto" component={Contact} />
       </div>

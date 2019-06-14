@@ -79,7 +79,7 @@ class ContactForm extends React.Component {
             <React.Fragment>
                 <Loading loading={this.state.isLoading} />
                 <form className="ContactForm form-horizontal mt-2" onSubmit={this.handleSubmit}>
-                    <h2 className="heading  mb-2">
+                    <h2 className="heading  mb-2 text-center">
                         Contacto
                     </h2>
                     <div className="form-group">
