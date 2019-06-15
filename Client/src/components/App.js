@@ -20,16 +20,6 @@ library.add(fab, faFacebookF,
 
 
 class App extends React.Component {
-  state = { sideDrawerOpen: false }
-
-  drawerToggleClickHandler = () => {
-    this.setState({ sideDrawerOpen: !this.state.sideDrawerOpen });
-  }
-
-  backdropClickHandler = () => {
-    this.setState({ sideDrawerOpen: false });
-  }
-
   render() {
     return (
       <div className="App">
@@ -39,7 +29,6 @@ class App extends React.Component {
         <Route path="/politica-de-cookies" component={CookiesPolicy} />
         <Route path="/contacto" component={Contact} />
       </div>
-
     )
   }
 }

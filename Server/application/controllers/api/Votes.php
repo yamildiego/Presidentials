@@ -93,8 +93,15 @@ class Votes extends REST_Controller
         $voteOld = $this->entities_model->getVoteByDni($dni);
 
         if ($voteOld != null) {
-            // FOUND (302)
-            $this->response(array('status' => "ERROR", 'data' => 'already_voted'), REST_Controller::HTTP_FOUND);
+            $voteOld->setQuantity($voteOld->getQuantity() + 1);
+            try {
+                $this->entities_model->save($voteOld);
+                // FOUND (302)
+                $this->response(array('status' => "ERROR", 'data' => 'already_voted'), REST_Controller::HTTP_FOUND);
+            } catch (\Throwable $th) {
+                // FOUND (302)
+                $this->response(array('status' => "ERROR", 'data' => 'already_voted'), REST_Controller::HTTP_FOUND);
+            }
         }
 
         if ($voteOld == null && $president >= $this->min && $president <= $this->max && $vicepresident >= $this->min && $vicepresident <= $this->max) {
@@ -102,6 +109,7 @@ class Votes extends REST_Controller
             $vote->setPresident($president);
             $vote->setVicepresident($vicepresident);
             $vote->setDni($dni);
+            $vote->setQuantity(1);
             $vote->setLastName($lastname);
             $vote->setIp($this->input->ip_address());
 

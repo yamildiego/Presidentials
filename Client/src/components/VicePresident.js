@@ -8,7 +8,7 @@ class VicePresident extends Component {
     render() {
         return (
             <React.Fragment>
-                <h1 className="text-center">Candidatos a Viceprecidentes</h1>
+                <h1 className="text-center">Candidatos a Vicepresidentes</h1>
                 <div className="d-flex flex-wrap justify-content-center">
                     {
                         data.map((item) => {

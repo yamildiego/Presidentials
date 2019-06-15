@@ -46,12 +46,18 @@ class Vote
     private $lastName;
 
     /**
+     * @var integer
+     *
+     * @Column(name="quantity", type="integer", nullable=true)
+     */
+    private $quantity;
+
+    /**
      * @var string
      *
      * @Column(name="ip", type="string", length=20, nullable=false)
      */
     private $ip;
-
 
     /**
      * Get id
@@ -160,6 +166,30 @@ class Vote
     }
 
     /**
+     * Set quantity
+     *
+     * @param integer $quantity
+     *
+     * @return Vote
+     */
+    public function setQuantity($quantity)
+    {
+        $this->quantity = $quantity;
+
+        return $this;
+    }
+
+    /**
+     * Get quantity
+     *
+     * @return integer
+     */
+    public function getQuantity()
+    {
+        return $this->quantity;
+    }
+
+    /**
      * Set ip
      *
      * @param string $ip
@@ -183,4 +213,3 @@ class Vote
         return $this->ip;
     }
 }
-

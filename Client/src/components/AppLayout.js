@@ -5,7 +5,15 @@ import SideDrawer from './SideDrawer/SideDrawer'
 import Backdrop from './Backdrop/Backdrop';
 
 class AppLayout extends Component {
-    state = {}
+    state = { sideDrawerOpen: false }
+
+    drawerToggleClickHandler = () => {
+        this.setState({ sideDrawerOpen: !this.state.sideDrawerOpen });
+    }
+
+    backdropClickHandler = () => {
+        this.setState({ sideDrawerOpen: false });
+    }
     render() {
         return (
             <div className="AppContainer">
