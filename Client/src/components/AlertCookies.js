@@ -23,7 +23,7 @@ class AlertCookies extends React.Component {
                         Utilizamos cookies propias y de terceros para mejorar la experiencia del usuario a través de su navegación.
                         Si continúas navegando aceptas su uso.
                         <Link to="/politica-de-cookies">Política de cookies</Link>
-                        <div>
+                        <div className="text-center">
                             <button type="button" onClick={this.handleClick}>Aceptar</button>
                         </div>
                     </div>

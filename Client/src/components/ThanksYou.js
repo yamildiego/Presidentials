@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { FacebookShareButton, WhatsappShareButton, TwitterShareButton } from 'react-share';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Constants from '../config';
 import './styles/ThanksYou.css';
 
 class ThanksYou extends Component {
@@ -10,14 +12,30 @@ class ThanksYou extends Component {
                 <h2>Gracias por participar de la encuesta</h2>
                 <p>Los resultados ser&aacute;n publicados el 20 de Julio</p>
                 <p>Te pedimos que compartas el sitio para poder llegar a la mayor cantidad de personas posibles</p>
-                <div className="text-center">
-                    {/* <div className="fb-share-button"
-                        data-size="large"
-                        data-href="https://www.presidenciales.com.ar"
-                        data-layout="button">
-                    </div> */}
-                    <div className="text-center">
-                        <Link to="/" className="btn btn-info" type="button">Volver al inicio</Link>
+                <div className="d-flex justify-content-center">
+                    <div style={{ width: '140px', margin: 'auto' }}>
+                        <FacebookShareButton quote={Constants.textShare} url={Constants.url} >
+                            <div className="BtnFacebook">
+                                <FontAwesomeIcon color="white" icon={['fab', 'facebook-square']} />
+                                Compartir
+                            </div>
+                        </FacebookShareButton>
+                    </div>
+                    <div style={{ width: '140px', margin: 'auto' }}>
+                        <TwitterShareButton quote={Constants.textShare} url={Constants.url} >
+                            <div className="BtnTwitter">
+                                <FontAwesomeIcon color="white" icon={['fab', 'twitter']} />
+                                Compartir
+                            </div>
+                        </TwitterShareButton>
+                    </div>
+                    <div style={{ width: '140px', margin: 'auto' }}>
+                        <WhatsappShareButton title={Constants.textShare} url={Constants.url} >
+                            <div className="BtnWhatsapp">
+                                <FontAwesomeIcon color="white" icon={['fab', 'whatsapp']} />
+                                Compartir
+                            </div>
+                        </WhatsappShareButton>
                     </div>
                 </div>
             </div>

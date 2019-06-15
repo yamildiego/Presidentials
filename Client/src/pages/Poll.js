@@ -11,7 +11,7 @@ import Constants from './../config';
 class Poll extends Component {
     state = {
         isLoading: false,
-        step: 0,
+        step: 3,
         president: null,
         vicepresident: null,
         already_voted: false,

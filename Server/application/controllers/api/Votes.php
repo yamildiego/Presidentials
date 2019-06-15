@@ -1,7 +1,9 @@
 <?php
 use Restserver\Libraries\REST_Controller;
 
-header("Access-Control-Allow-Origin: *");
+header('Access-Control-Allow-Origin: https://www.presidenciales.com.ar');
+header("Access-Control-Allow-Headers: *");
+header("Access-Control-Allow-Methods: GET, POST, PUT");
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
@@ -19,6 +21,12 @@ class Votes extends REST_Controller
         $this->load->model('entities_model');
         $this->min = 0;
         $this->max = 7;
+        $REFERER = $_SERVER['HTTP_REFERER'];
+
+        if ($REFERER != "https://www.presidenciales.com.ar/encuesta") {
+            $this->response(array('status' => "ERROR", 'data' => 'unexpected_error'), REST_Controller::HTTP_INTERNAL_SERVER_ERROR);
+        }
+
     }
 
     public function president_post()

@@ -12,7 +12,7 @@ class PersonalInfo extends Component {
         },
         // value: null,
         // expired: false
-        value: "DADASSDA",
+        value: "XXX",
         expired: false
     }
 
@@ -30,8 +30,8 @@ class PersonalInfo extends Component {
 
         if (this.state.form.dni === "" ||
             this.state.form.lastname === "" ||
-            this.state.form.value === null ||
-            this.state.form.expired === true)
+            this.state.value === null ||
+            this.state.expired === true)
             this.setState({ showErrors: true });
         else
             this.props.nextStep(this.state.form.dni, this.state.form.lastname)

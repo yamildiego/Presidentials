@@ -38,3 +38,49 @@
     margin: 2rem;
     text-align: center;
 }
+
+.BtnFacebook {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 4px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    background: #577fbc;
+    border: 1px solid #577fbc;
+}
+
+.BtnWhatsapp {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 4px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    background: #25d366;
+    border: 1px solid #25d366;
+}
+
+.BtnTwitter {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 4px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    background: #1da1f2;
+    border: 1px solid #1da1f2;
+}
+
+.BtnFacebook svg, .BtnTwitter svg, .BtnWhatsapp SVG {
+    margin-right: 10px
+}
