@@ -10,10 +10,10 @@ class PersonalInfo extends Component {
             dni: '',
             lastname: ''
         },
-        // value: null,
-        // expired: false
-        value: "XXX",
+        value: null,
         expired: false
+        // value: "XXX",
+        // expired: false
     }
 
     handleChange = e => {
