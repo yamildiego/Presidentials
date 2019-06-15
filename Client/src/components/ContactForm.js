@@ -36,7 +36,7 @@ class ContactForm extends React.Component {
             this.setState({ showErrors: true });
         } else {
             this.setState({ isLoading: true });
-            fetch(Constants.urlServerPHP + '/contact', {
+            fetch(Constants.urlServerPHP + 'Contact/send', {
                 method: 'POST',
                 body: queryString.stringify(this.state.form),
                 headers: {
@@ -48,9 +48,10 @@ class ContactForm extends React.Component {
                 .then(response => {
                     if (response.status) {
                         if (isset(response.errors)) {
-                            this.setState({ isLoading: false, message: { text: `Ups ha ocurrido un error en nuestros servidor, contacte al administrador del sistema. ${Constants.emailAdministrator}`, type: "ERROR" } });
+                            this.setState({ isLoading: false, message: { text: `Ups ha ocurrido un error en nuestros servidor, contacte al administrador del sistema X78. ${Constants.emailAdministrator}`, type: "ERROR" } });
                         } else {
                             this.setState({
+                                isLoading: false,
                                 showErrors: false,
                                 message: {
                                     text: "La consulta se envio con éxito, te responderemos a la brevedad.",
@@ -64,13 +65,10 @@ class ContactForm extends React.Component {
                             });
                         }
                     } else {
-                        this.setState({ isLoading: false, message: { text: `Ups ha ocurrido un error en nuestros servidor, contacte al administrador del sistema. ${Constants.emailAdministrator}`, type: "ERROR" } });
+                        this.setState({ isLoading: false, message: { text: `Ups ha ocurrido un error en nuestros servidor, contacte al administrador del sistema X88. ${Constants.emailAdministrator}`, type: "ERROR" } });
                     }
-                    this.setState({ isLoading: false, message: { text: `Ups ha ocurrido un error en nuestros servidor, contacte al administrador del sistema. ${Constants.emailAdministrator}`, type: "ERROR" } });
                 }).catch(() => {
-                    this.setState({ isLoading: false, message: { text: `Ups ha ocurrido un error en nuestros servidor, contacte al administrador del sistema. ${Constants.emailAdministrator}`, type: "ERROR" } });
-                    // console.error("casa");
-                    // this.setState({ isLoading: false, messageError: "Ups ha ocurrido un error en nuestros servidor, contacte al administrador del sistema. " + Constants.emailAdministrator });
+                    this.setState({ isLoading: false, message: { text: `Ups ha ocurrido un error en nuestros servidor, contacte al administrador del sistema X43. ${Constants.emailAdministrator}`, type: "ERROR" } });
                 });
         }
     }
@@ -128,7 +126,7 @@ class ContactForm extends React.Component {
                     </div>
                     {
                         this.state.message.text !== '' && this.state.message.type === 'OK' &&
-                        <p className="alert alert-info">{this.state.message.text}</p>
+                        <p className="alert alert-success">{this.state.message.text}</p>
                     }
                     {
                         this.state.message.text !== '' && this.state.message.type === 'ERROR' &&

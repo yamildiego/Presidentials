@@ -10,7 +10,7 @@ class ThanksYou extends Component {
         return (
             <div className="ThanksYou mt-4">
                 <h2>Gracias por participar de la encuesta</h2>
-                <p>Los resultados ser&aacute;n publicados el 20 de Julio</p>
+                <p>Los resultados ser&aacute;n publicados el 31 de Julio</p>
                 <p>Te pedimos que compartas el sitio para poder llegar a la mayor cantidad de personas posibles</p>
                 <div className="d-flex justify-content-center">
                     <div style={{ width: '140px', margin: 'auto' }}>

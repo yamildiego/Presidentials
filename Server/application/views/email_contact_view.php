@@ -8,7 +8,4 @@
     <p style="color: #444; font-size: 12px;">
         Email: <?php echo $obj->email; ?>
     </p>
-    <p style="color: #444; font-size: 12px;">
-        Telefono: <?php echo ($obj->phone == null) ? '-' : $obj->phone; ?>
-    </p>
 </div>
