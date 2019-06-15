@@ -8,7 +8,6 @@ import './styles/Home.css';
 
 
 class Home extends Component {
-    state = {}
     render() {
         return (
             <AppLayout>
